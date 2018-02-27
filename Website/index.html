@@ -2,20 +2,37 @@
 <html>
 <head>
 <title>Login</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href="myStyle.css">
+<script src="myScript.js"></script>
+<meta charset="UTF-8">
 </head>
 <body>
 
-<form>
+
 <div class="username">
 <label for="username">Choose a username: </label>
 <input type="text" id="username" name="name" placeholder="All caps...">
+<button class="submitBtn">Submit</button>
 </div>
 
-<div>
-<button>Submit</button>
+
+  <a class="active, showListDiv" onclick="showTutorial()">Show all colors</a></li>
+<div id="Tutorial">
+  <h1>Learning Js Properly: Project #1 - Dynamic Quiz</h1>
+   			<br/>
+    		<div class='button' id='next'><a href='#'>Next</a></div>
+    		<div class='button' id='prev'><a href='#'>Prev</a></div>
+    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
+    		<!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<script type="text/javascript" src='questions.json'></script>
+		<script type='text/javascript' src='myScript.js'></script>
+    	</div>
 </div>
-</form>
 
 </body>
 </html>

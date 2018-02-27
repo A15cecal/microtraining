@@ -3,7 +3,15 @@ body {
 	margin: 0 auto;
 }
 .username {
-	top: 50%;
-	left: 50%;
+	top: 20%;
+	left: 35%;
+	position: absolute;
+}
+
+#Tutorial {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	left: 10px;
 	position: absolute;
 }
