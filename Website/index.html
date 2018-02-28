@@ -5,35 +5,61 @@
 <link rel="stylesheet" type="text/css" href="myStyle.css">
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 
-<div class="username">
+<!-- <div class="username">
 <label for="username">Choose a username: </label>
 <input type="text" id="username" name="name" placeholder="All caps...">
+<label for="password"> New password: </label>
+<input type="password" id="password" placeholder="New password...">
 <button class="submitBtn">Submit</button>
+</div> -->
+
+<!-- test -->
+
+<div id="formCreate">
+  <h1 class="firstH">Material Design Form</h1>
+<form>
+  <div class="group">
+    <input type="text" class="formInput"><span class="highlight"></span><span class="bar"></span>
+    <label>Name</label>
+  </div>
+  <div class="group">
+    <input type="password" class="formInput"><span class="highlight"></span><span class="bar"></span>
+    <label>Email</label>
+  </div>
+  <button type="button" class="buttonBlue ">Subscribe
+    <span class="ripples buttonRipples ripplesCircle"></span>
+  </button>
+    <a class="active, showListDiv, takeQuizText" onclick="showTutorial()">Take a quiz</a>
+</form>
 </div>
+<!-- end test -->
 
+<!-- The quiz -->
 
-  <a class="active, showListDiv" onclick="showTutorial()">Take a quiz</a></li>
 <div id="Tutorial">
   <div id='container'>
   <div id='title'>
   <h1>Password quiz</h1>
+  </div>
    			<br/>
         <div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
-    		<div class='button' id='prev'><a href='#'>Prev</a></div>
-    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
+    		<div class='quizBtn' id='next'><a href='#'>Next</a></div>
+    		<div class='quizBtn' id='prev'><a href='#'>Prev</a></div>
+    		<div class='quizBtn' id='start'> <a href='#'>Start Over</a></div>
     		<!-- <button class='' id='next'>Next</a></button>
     		<button class='' id='prev'>Prev</a></button>
     		<button class='' id='start'> Start Over</a></button> -->
 
 		<!-- <script type="text/javascript" src='questions.json'></script> -->
 		<script type='text/javascript' src='myScript.js'></script>
-    	</div>
+    </div>
 </div>
+<!-- end quiz -->
 
 </body>
 </html>
