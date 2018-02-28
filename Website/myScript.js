@@ -8,6 +8,12 @@ function showTutorial() {
   }
 }
 
+$(document).ready(function(){
+    $(".takeQuizText").click(function(){
+        $("#formCreate").hide(1000);
+    });
+});
+
 /*For the animations and siplay of the user-form*/
 $(window, document, undefined).ready(function() {
 
