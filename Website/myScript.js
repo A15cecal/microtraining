@@ -52,33 +52,33 @@ $(window, document, undefined).ready(function() {
 });
 /*end animations user-form*/
 
-// HUR FIXAR JAG DETTA MED TEXT ISTÄLLET FÖR SIFFROR??!!
+//  MAKE REAL QUESTIONS LATER
 // This is for the quiz
 (function() {
   var questions = [{
-    question: "What is 2+5?",
-    choices: [2, 5, 7, 15, 20],
-    correctAnswer: 2
+    question: "Are special characters good to use in a password?",
+    choices: ["Always", "Never"],
+    correctAnswer: 0
   }, {
-    question: "What is 3+6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 2
+    question: "How many characters should a password consist of?",
+    choices: ["less than 3", 6, 8, 12, "Preferably more than 12"],
+    correctAnswer: 4
   }, {
-    question: "What is 8-7?",
-    choices: [72, 99, 1, 134, 156],
-    correctAnswer: 2
+    question: "Should you combine capital and lowercase letters?",
+    choices: ["yes", "no"],
+    correctAnswer: 0
   }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "Which one is the strongest password?",
+    choices: ["wqerty123", "BluBB", "Alex!993", "Hulrlr500!?", "IlikeBuTTerFlies"],
     correctAnswer: 3
   }, {
-    question: "What is 8+8?",
-    choices: [20, 30, 40, 16, 64],
-    correctAnswer: 3
+    question: "Should a passwordy consist of a common word?",
+    choices: ["Never", "Always"/*, 40, 16, 64*/],
+    correctAnswer: 0
   }];
 
   var questionCounter = 0; //This is for keeping track of the question-number
-  var selections = []; //Array containing the made choices
+  var selections = []; //Array containing the position of made choices
   var quiz = $('#quiz'); //Quiz div
 
   // Display question
@@ -209,7 +209,8 @@ $(window, document, undefined).ready(function() {
 
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
-      if (selections[i] === questions[i].correctAnswer) {
+    //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
+      if (selections[i] == questions[i].correctAnswer) {
         numCorrect++;
       }
     }
