@@ -223,11 +223,16 @@ input:focus ~ .highlight {
 
 
 /*everything for the quiz*/
+.quizHeading {
+	color: #000000;
+	font-weight: bold;
+}
 #Tutorial {
 	display: none;
 	width: 100%;
-	margin: 0 auto;
-	left: 10px;
+	margin-top: 50px;
+	margin: 4em auto;
+	left: 5%;
 	position: absolute;
 }
 #title {

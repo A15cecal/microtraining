@@ -58,23 +58,23 @@ $(window, document, undefined).ready(function() {
   var questions = [{
     question: "What is 2+5?",
     choices: [2, 5, 7, 15, 20],
-    correctAnswer: 7
+    correctAnswer: 2
   }, {
     question: "What is 3+6?",
     choices: [3, 6, 9, 12, 18],
-    correctAnswer: 9
+    correctAnswer: 2
   }, {
     question: "What is 8-7?",
     choices: [72, 99, 1, 134, 156],
-    correctAnswer: 1
+    correctAnswer: 2
   }, {
     question: "What is 1*7?",
     choices: [4, 5, 6, 7, 8],
-    correctAnswer: 7
+    correctAnswer: 3
   }, {
     question: "What is 8+8?",
     choices: [20, 30, 40, 16, 64],
-    correctAnswer: 16
+    correctAnswer: 3
   }];
 
   var questionCounter = 0; //This is for keeping track of the question-number
