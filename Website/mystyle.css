@@ -3,7 +3,7 @@ body {
 	margin: 0 auto;
 }
 @viewport{
-  width: device-width;
+	width: device-width;
 }
 
 /* for the user-form*/
@@ -66,7 +66,7 @@ label {
 
 input:focus ~ label, input.used ~ label {
 	top: -20px;
-  transform: scale(.75); left: -2px;
+	transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
 	color: #4a89dc;
 }
@@ -131,23 +131,23 @@ input:focus ~ .highlight {
 /* Button */
 
 .buttonBlue {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  margin: .3em 0 1em 0;
-  width: 100%;
-  vertical-align: middle;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid #3160B6;
-  cursor: pointer;
-  transition: all 0.15s ease;
+	position: relative;
+	display: inline-block;
+	padding: 12px 24px;
+	margin: .3em 0 1em 0;
+	width: 100%;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	letter-spacing: 1px;
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid #3160B6;
+	cursor: pointer;
+	transition: all 0.15s ease;
 }
 .buttonBlue:focus { outline: 0; }
 
@@ -155,8 +155,8 @@ input:focus ~ .highlight {
 /* Button modifiers */
 
 .buttonBlue {
-  background: #4a89dc;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+	background: #4a89dc;
+	text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
 
 .buttonBlue:hover { background: #357bd8; }
@@ -165,57 +165,57 @@ input:focus ~ .highlight {
 /* Ripples container */
 
 .ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: transparent;
 }
 
 
 /* Ripples circle */
 
 .ripplesCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.25);
 }
 
 .ripples.is-active .ripplesCircle {
-  animation: ripples .4s ease-in;
+	animation: ripples .4s ease-in;
 }
 
 
 /* Ripples animation */
 
 @keyframes ripples {
-  0% { opacity: 0; }
+	0% { opacity: 0; }
 
-  25% { opacity: 1; }
+	25% { opacity: 1; }
 
-  100% {
-    width: 200%;
-    padding-bottom: 200%;
-    opacity: 0;
-  }
+	100% {
+		width: 200%;
+		padding-bottom: 200%;
+		opacity: 0;
+	}
 }
 /* .username {
-	top: 20%;
-	left: 35%;
-	width: 200px;
-	height: 150px;
-	position: absolute;
+top: 20%;
+left: 35%;
+width: 200px;
+height: 150px;
+position: absolute;
 }
 .submitBtn {
-	display: block;
+display: block;
 } */
 /*end user form*/
 
@@ -223,10 +223,10 @@ input:focus ~ .highlight {
 
 
 /*everything for the quiz*/
-.quizHeading {
-	color: #000000;
-	font-weight: bold;
-}
+/* .quizHeading {
+color: #000000;
+font-weight: bold;
+} */
 #Tutorial {
 	display: none;
 	width: 100%;
@@ -239,7 +239,17 @@ input:focus ~ .highlight {
 	text-align: center;
 }
 #container {
-	width:40%;
+	/*old attributes, New
+	ones are styled same as the form */
+	width: 40%;
+	min-height: 250px;
+	margin: 4em auto;
+	padding. 3em 2em 2em 2em;
+	background-color: #fafafa;
+	color: #000000;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px
+	/* width:40%;
 	margin:auto;
 	padding: 0 25px 40px 10px;
 	background-color: #1E90FF;
@@ -247,7 +257,7 @@ input:focus ~ .highlight {
 	border-radius:5px;
 	color: #FFFFFF;
 	font-weight: bold;
-	box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888; */
 }
 #quiz {
 	text-indent: 50px;
@@ -255,14 +265,24 @@ input:focus ~ .highlight {
 }
 #prev {
 	display:none;
+	float: left;
 }
 
-#start {
-	display:none;
-	width: 90px;
+#next {
+	overflow: hidden;
 }
+
 .quizBtn {
-	border:1px solid;
+	text-align: center;
+	background-color: #4a89dc;
+	color: white;
+	width: 100px;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 5px;
+	/* border:1px solid;
 	border-radius:5px;
 	width: 40px;
 	padding-left:5px;
@@ -271,22 +291,19 @@ input:focus ~ .highlight {
 	float:right;
 	background-color: #DCDCDC;
 	color: black;
-	margin: 0 2px 0 2px;
+	margin: 0 2px 0 2px; */
 }
 
-.quizBtn.active {
-	background-color: #F8F8FF;
-	color: #525252;
+
+.quizBtn:hover {
+	background-color: #357bd8;
+	color: #ffffff;
 }
 
-quizBtn {
-	position: relative;
-	float:right;
-}
 
 .quizBtn a {
 	text-decoration: none;
-	color: black;
+	color: #ffffff;
 }
 ul {
 	list-style-type: none;

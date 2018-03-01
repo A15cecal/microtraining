@@ -125,16 +125,16 @@ $(window, document, undefined).ready(function() {
     questionCounter = 0;
     selections = [];
     displayNext();
-    $('#start').hide();
   });
 
   // Animates buttons on hover
-  $('.quizBtn').on('mouseenter', function () {
-    $(this).addClass('active');
-  });
-  $('.quizBtn').on('mouseleave', function () {
-    $(this).removeClass('active');
-  });
+  /*im using hover in the css instead...*/
+  // $('.quizBtn').on('mouseenter', function () {
+  //   $(this).addClass('active');
+  // });
+  // $('.quizBtn').on('mouseleave', function () {
+  //   $(this).removeClass('active');
+  // });
 
   // This creates the div for the questions
   function createQuestionElement(index) {
@@ -198,7 +198,6 @@ $(window, document, undefined).ready(function() {
         quiz.append(scoreElem).fadeIn();
         $('#next').hide();
         $('#prev').hide();
-        $('#start').show();
       }
     });
   }
@@ -210,6 +209,7 @@ $(window, document, undefined).ready(function() {
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
     //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
+    alert(questions[i].choices[selections[i]]);
       if (selections[i] == questions[i].correctAnswer) {
         numCorrect++;
       }
@@ -219,5 +219,6 @@ $(window, document, undefined).ready(function() {
     questions.length + ' right!!!');
     return score;
   }
+
 })();
 // End quiz
