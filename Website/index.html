@@ -25,16 +25,20 @@
 <form>
   <div class="group">
     <input type="text" class="formInput"><span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
+    <label>Username</label>
   </div>
   <div class="group">
-    <input type="password" class="formInput"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="password" class="formInput" id="password"><span class="highlight"></span><span class="bar"></span>
+    <label>Password</label>
   </div>
-  <button type="button" class="buttonBlue ">Subscribe
+  <div class="group">
+     <input type="password" class="formInput" id="confirm_password" required><span class="highlight"></span><span class="bar"></span>
+    <label>Confirm password</label>
+  </div>
+  <button type="button" class="buttonBlue ">Create account
     <span class="ripples buttonRipples ripplesCircle"></span>
   </button>
-    <a class="active, showListDiv, takeQuizText" onclick="showTutorial()">Take a quiz</a>
+    Learn how to create a strong password <a class="active, showListDiv, takeQuizText" onclick="showTutorial()"> here</a>
 </form>
 </div>
 <!-- end test -->
