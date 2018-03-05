@@ -9,7 +9,11 @@ body {
 /* for the user-form*/
 
 #formCreate {
-
+	width: 100%;
+	margin-top: 50px;
+	margin: 4em auto;
+	left: 5%;
+	position: absolute;
 }
 
 h1 { color: #636363;
@@ -314,5 +318,14 @@ ul {
 	cursor: pointer;
 	text-decoration: underline;
 	color: blue;
+}
+/*this is for going back to the form*/
+.goBackText {
+	cursor: pointer;
+	text-decoration: underline;
+	color: blue;
+}
+.centerText {
+	text-align: center;
 }
 /* End quiz */

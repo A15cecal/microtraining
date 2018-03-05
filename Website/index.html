@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
-<link rel="stylesheet" type="text/css" href="myStyle.css">
-<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 
-<!-- <div class="username">
-<label for="username">Choose a username: </label>
-<input type="text" id="username" name="name" placeholder="All caps...">
-<label for="password"> New password: </label>
-<input type="password" id="password" placeholder="New password...">
-<button class="submitBtn">Submit</button>
+  <!-- <div class="username">
+  <label for="username">Choose a username: </label>
+  <input type="text" id="username" name="name" placeholder="All caps...">
+  <label for="password"> New password: </label>
+  <input type="password" id="password" placeholder="New password...">
+  <button class="submitBtn">Submit</button>
 </div> -->
 
 <!-- test -->
 
 <div id="formCreate">
   <h1 class="firstH">Create an account</h1>
-<form>
-  <div class="group">
-    <input type="text" class="formInput"><span class="highlight"></span><span class="bar"></span>
-    <label>Username</label>
-  </div>
-  <div class="group">
-    <input type="password" class="formInput" id="password"><span class="highlight"></span><span class="bar"></span>
-    <label>Password</label>
-  </div>
-  <div class="group">
-     <input type="password" class="formInput" id="confirm_password" required><span class="highlight"></span><span class="bar"></span>
-    <label>Confirm password</label>
-  </div>
-  <button type="button" class="buttonBlue ">Create account
-    <span class="ripples buttonRipples ripplesCircle"></span>
-  </button>
+  <form>
+    <div class="group">
+      <input type="text" class="formInput"><span class="highlight"></span><span class="bar"></span>
+      <label>Username</label>
+    </div>
+    <div class="group">
+      <input type="password" class="formInput" id="password"><span class="highlight"></span><span class="bar"></span>
+      <label>Password</label>
+    </div>
+    <div class="group">
+      <input type="password" class="formInput" id="confirm_password" required><span class="highlight"></span><span class="bar"></span>
+      <label>Confirm password</label>
+    </div>
+    <button type="submit" class="buttonBlue ">Create account
+      <span class="ripples buttonRipples ripplesCircle"></span>
+    </button>
     Learn how to create a strong password <a class="active, showListDiv, takeQuizText" onclick="showTutorial()"> here</a>
-</form>
+  </form>
 </div>
 <!-- end test -->
 
@@ -48,22 +48,23 @@
 <div id="Tutorial">
   <h1>Password quiz</h1>
   <div id='container'>
-  <div id='title'>
-  <!-- <h1 class="quizHeading">Password quiz</h1> -->
-  </div>
-   			<br/>
-        <div id='quiz'></div>
-        <div class='quizBtn' id='prev'><a href='#'>Prev</a></div>
-    		<div class='quizBtn' id='next'><a href='#'>Next</a></div>
-
-    		<!-- <div class='quizBtn' id='start'> <a href='#'>Start Over</a></div> -->
-    		<!-- <button class='' id='next'>Next</a></button>
-    		<button class='' id='prev'>Prev</a></button>
-    		<button class='' id='start'> Start Over</a></button> -->
-
-		<!-- <script type="text/javascript" src='questions.json'></script> -->
-		<script type='text/javascript' src='myScript.js'></script>
+    <div id='title'>
+      <!-- <h1 class="quizHeading">Password quiz</h1> -->
     </div>
+    <br/>
+    <div id='quiz'></div>
+    <div class='quizBtn' id='prev'><a href='#'>Prev</a></div>
+    <div class='quizBtn' id='next'><a href='#'>Next</a></div>
+  <p class="centerText">Go back to the <a class="showRegistration, goBackText" onclick="showRegistration()"> registration</a></p>
+
+    <!-- <div class='quizBtn' id='start'> <a href='#'>Start Over</a></div> -->
+    <!-- <button class='' id='next'>Next</a></button>
+    <button class='' id='prev'>Prev</a></button>
+    <button class='' id='start'> Start Over</a></button> -->
+
+    <!-- <script type="text/javascript" src='questions.json'></script> -->
+    <script type='text/javascript' src='myScript.js'></script>
+  </div>
 </div>
 <!-- end quiz -->
 

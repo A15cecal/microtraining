@@ -1,4 +1,5 @@
 
+/* show/hide for the quiz-div*/
 function showTutorial() {
   var x = document.getElementById("Tutorial");
   if (x.style.display === "block") {
@@ -7,12 +8,27 @@ function showTutorial() {
     x.style.display = "block";
   }
 }
-
-$(document).ready(function(){
-    $(".takeQuizText").click(function(){
-        $("#formCreate").hide(1000);
-    });
+$(document).ready(function() {
+  $(".takeQuizText").click(function() {
+    $("#formCreate").hide(1000);
+  });
 });
+
+/* show/hide for the form-div*/
+function showRegistration() {
+  var x = document.getElementById("formCreate");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+$(document).ready(function() {
+  $(".goBackText").click(function() {
+    $("#Tutorial").hide(1000);
+  });
+});
+
 
 /*For the animations and siplay of the user-form*/
 $(window, document, undefined).ready(function() {
@@ -20,9 +36,9 @@ $(window, document, undefined).ready(function() {
   $('input').blur(function() {
     var $this = $(this);
     if ($this.val())
-      $this.addClass('used');
+    $this.addClass('used');
     else
-      $this.removeClass('used');
+    $this.removeClass('used');
   });
 
   var $ripples = $('.ripples');
@@ -46,7 +62,7 @@ $(window, document, undefined).ready(function() {
   });
 
   $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
-  	$(this).removeClass('is-active');
+    $(this).removeClass('is-active');
   });
 
 });
@@ -208,8 +224,8 @@ $(window, document, undefined).ready(function() {
 
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
-    //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
-    alert(questions[i].choices[selections[i]]);
+      //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
+      alert(questions[i].choices[selections[i]]);
       if (selections[i] == questions[i].correctAnswer) {
         numCorrect++;
       }
@@ -225,10 +241,9 @@ $(window, document, undefined).ready(function() {
 
 /*THIS WILL BE HERE FOR NOW, NOT REALLY IMPLEMENTED YET*/
 /*For the confirm password*/
-var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
+var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
 
-function validatePassword(){
+function validatePassword() {
   if(password.value != confirm_password.value) {
     confirm_password.setCustomValidity("Passwords Don't Match");
   } else {
