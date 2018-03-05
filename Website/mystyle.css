@@ -345,3 +345,21 @@ ul {
 	text-align: center;
 }
 /* End quiz */
+
+/*for the video*/
+.video-container {
+    position: relative;
+    padding-bottom: 17.00%;
+    padding-top: 30px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 850px;
+}
+/*end video*/
