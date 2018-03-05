@@ -267,13 +267,29 @@ font-weight: bold;
 	text-indent: 50px;
 	display:none;
 }
+
+#centerBtns {
+ width:100%;
+ top: 6px;
+ left: 110px;
+ position: relative;
+}
 #prev {
 	display:none;
+	position: relative;
+	margin: auto;
 	float: left;
+	/* position: relative;
+	left: 100px; */
 }
 
 #next {
+	position: relative;
+	margin: auto;
 	overflow: hidden;
+	/* left: 300px;
+	bottom: 52px;
+	position: relative; */
 }
 
 .quizBtn {
