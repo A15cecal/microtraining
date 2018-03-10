@@ -68,7 +68,13 @@ $(window, document, undefined).ready(function() {
 });
 /*end animations user-form*/
 
-//  MAKE REAL QUESTIONS LATER
+/*The user should be presented with the video first,
+the "next"-button should be gray:ed
+out and then fill in when the user finishes the video*/
+
+// implement some free text-areas, not just multimple choice
+/*NEED TO FIGURE OUT WHAT TO DO WITH THE VIDEO AND TEH FIRST question*/
+
 // This is for the quiz
 (function() {
   var questions = [{
