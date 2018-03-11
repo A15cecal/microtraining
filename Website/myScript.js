@@ -29,8 +29,12 @@ $(document).ready(function() {
   });
 });
 
+/*for the video, shows the div for set amount of time*/
+jQuery("#infor").delay(60000).fadeOut("slow");
+/*end video*/
 
-/*For the animations and siplay of the user-form*/
+
+/*For the animations of the user-form*/
 $(window, document, undefined).ready(function() {
 
   $('input').blur(function() {

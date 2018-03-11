@@ -347,6 +347,9 @@ ul {
 /* End quiz */
 
 /*for the video*/
+.hideme {
+    /* background: #ff0; */
+}
 .video-container {
     /* position: relative;
     padding-bottom: 17.00%;
