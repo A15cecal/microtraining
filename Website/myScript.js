@@ -106,6 +106,7 @@ out and then fill in when the user finishes the video*/
   var questionCounter = 0; //This is for keeping track of the question-number
   var selections = []; //Array containing the position of made choices
   var quiz = $('#quiz'); //Quiz div
+  $("#quiz").delay(57000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
 
   // Display question
   displayNext();

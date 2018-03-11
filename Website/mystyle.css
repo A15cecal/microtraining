@@ -269,10 +269,10 @@ font-weight: bold;
 }
 
 #centerBtns {
- width:100%;
- top: 6px;
- left: 110px;
- position: relative;
+	width:100%;
+	top: 6px;
+	left: 110px;
+	position: relative;
 }
 #prev {
 	display:none;
@@ -348,21 +348,21 @@ ul {
 
 /*for the video*/
 .hideme {
-    /* background: #ff0; */
+	text-align: center;
 }
 .video-container {
-    /* position: relative;
-    padding-bottom: 17.00%;
-    padding-top: 30px;
-    height: 10px;
-    overflow: hidden; */
+	/* position: relative;
+	padding-bottom: 17.00%;
+	padding-top: 30px;
+	height: 10px;
+	overflow: hidden; */
 }
 
 .video-container iframe,
 .video-container object,
 .video-container embed {
-    /* position: absolute;
-    top: 0;
-    left: 850px; */
+	/* position: absolute;
+	top: 0;
+	left: 850px; */
 }
 /*end video*/
