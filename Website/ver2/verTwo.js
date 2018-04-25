@@ -184,16 +184,23 @@ out and then fill in when the user finishes the video*/
     var questionElement = $('<div>', {
       id: 'question'
     });
-
+    // Creates the question-header
     var header = $('<h2>Question ' + (index + 1) + ':</h2>');
     questionElement.append(header);
 
+    // Creates the question-text
     var question = $('<p>').append(questions[index].question);
     questionElement.append(question);
 
-    var radioButtons = createRadios(index);
-    questionElement.append(radioButtons);
-
+    // the radio-buttons
+    if(questions[index].type=="multiple"){
+      var radioButtons = createRadios(index);
+      questionElement.append(radioButtons);
+      // Uses a textbox instead of radio-buttons
+    }else if(questions[index].type=="passwordbox"){
+      // For the video
+    }else if(questions[index].type=="video"){
+    }
     return questionElement;
   }
 
