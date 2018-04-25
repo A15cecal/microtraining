@@ -84,23 +84,28 @@ out and then fill in when the user finishes the video*/
   var questions = [{
     question: "Are special characters good to use in a password?",
     choices: ["Always", "Never"],
-    correctAnswer: 0
+    correctAnswer: 0,
+    type: "multiple"
   }, {
     question: "How many characters should a password consist of?",
     choices: ["less than 3", 6, 8, 12, "Preferably more than 12"],
-    correctAnswer: 4
+    correctAnswer: 4,
+    type: "multiple"
   }, {
     question: "Should you combine capital and lowercase letters?",
     choices: ["yes", "no"],
-    correctAnswer: 0
+    correctAnswer: 0,
+    type: "multiple"
   }, {
     question: "Which one is the strongest password?",
     choices: ["wqerty123", "BluBB", "Alex!993", "Hulrlr500!?", "IlikeBuTTerFlies"],
-    correctAnswer: 3
+    correctAnswer: 3,
+    type: "multiple"
   }, {
     question: "Should a passwordy consist of a common word?",
     choices: ["Never", "Always"/*, 40, 16, 64*/],
-    correctAnswer: 0
+    correctAnswer: 0,
+    type: "multiple"
   }];
 
   var questionCounter = 0; //This is for keeping track of the question-number
