@@ -97,15 +97,26 @@ out and then fill in when the user finishes the video*/
     correctAnswer: 0,
     type: "multiple"
   }, {
+    question: "Please suggest a possible password",
+    choices: [],
+    correctAnswer: 0,
+    type: "passwordbox"
+  }, {
     question: "Which one is the strongest password?",
     choices: ["wqerty123", "BluBB", "Alex!993", "Hulrlr500!?", "IlikeBuTTerFlies"],
     correctAnswer: 3,
     type: "multiple"
   }, {
     question: "Should a passwordy consist of a common word?",
-    choices: ["Never", "Always"/*, 40, 16, 64*/],
+    choices: ["Never", "Always"],
     correctAnswer: 0,
     type: "multiple"
+  }, {
+    question: "youtubeurl",
+    choices: [],
+    correctAnswer: 0,
+    type: "video"
+
   }];
 
   var questionCounter = 0; //This is for keeping track of the question-number
