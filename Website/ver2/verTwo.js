@@ -224,11 +224,22 @@ out and then fill in when the user finishes the video*/
   }
 
   function createTextField(index) {
+    var passField = $('<input type="password" placeholder="type in the password">');
+    var repeatPass = $('<input type="password" placeholder="type in the password again">');
+    var submitPass;
+    submitPass = '<input type="submit" value="Submit" />';
+    submitPass += questions[index].choices[i];
+    repeatPass.append(passField);
 
   }
 
   function createVideo(index) {
+    // var videoContainer = $('<div id="videoContainer" />');
+    // var repeatPass = $('<iframe width="420" height="315" src="https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1"/>');
+  }
 
+  function choose() {
+    selections[questionCounter] = +$('input[name="answer"]:checked').val();
   }
 
   // Show next
