@@ -10,13 +10,13 @@ function showTutorial() {
 }
 $(document).ready(function() {
   $(".takeQuizText").click(function() {
-    $("#formCreate").hide(1000);
+    $("#landingPage").hide(1000);
   });
 });
 
 /* show/hide for the form-div*/
 function showRegistration() {
-  var x = document.getElementById("formCreate");
+  var x = document.getElementById("landingPage");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -198,8 +198,12 @@ out and then fill in when the user finishes the video*/
       questionElement.append(radioButtons);
       // Uses a textbox instead of radio-buttons
     }else if(questions[index].type=="passwordbox"){
+      var passwordField = createTextField(index);
+      questionElement.append(passwordField);
       // For the video
     }else if(questions[index].type=="video"){
+      var passwordVideo = createVideo(index);
+      questionElement.append(passwordVideo);
     }
     return questionElement;
   }
@@ -218,9 +222,13 @@ out and then fill in when the user finishes the video*/
     }
     return radioList;
   }
-  // handles the selected one and puts it in the array
-  function choose() {
-    selections[questionCounter] = +$('input[name="answer"]:checked').val();
+
+  function createTextField(index) {
+
+  }
+
+  function createVideo(index) {
+
   }
 
   // Show next
