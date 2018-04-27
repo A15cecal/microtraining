@@ -224,13 +224,15 @@ out and then fill in when the user finishes the video*/
   }
 
   function createTextField(index) {
-    var passField = $('<input type="password" placeholder="type in the password">');
-    var repeatPass = $('<input type="password" placeholder="type in the password again">');
-    var submitPass;
-    submitPass = '<input type="submit" value="Submit" />';
-    submitPass += questions[index].choices[i];
-    repeatPass.append(passField);
-
+    for (var i = 0; i < questions[index].choices.length; i++) {
+      var passField = $('<input type="password" placeholder="type in the password">');
+      var repeatPass = $('<input type="password" placeholder="type in the password again">');
+      var submitPass;
+      submitPass = '<input type="submit" value="Submit" />';
+      passField += questions[index].choices[i];
+      repeatPass.append(passField);
+    }
+    return passField;
   }
 
   function createVideo(index) {
