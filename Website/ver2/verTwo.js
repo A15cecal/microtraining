@@ -112,10 +112,10 @@ type: "video"
 var questionCounter = 0; //This is for keeping track of the question-number
 var selections = []; //Array containing the position of made choices
 var quiz = $('#quiz'); //Quiz div
-$("#quiz").delay(60000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
+// $("#quiz").delay(60000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
 
 // Display question
-displayNext();
+// displayNext();
 
 // Click handler for the 'next' button
 $('#next').on('click', function (e) {
@@ -125,7 +125,8 @@ $('#next').on('click', function (e) {
   if(quiz.is(':animated')) {
     return false;
   }
-  choose();
+  // gets the input if not -1, which is true for video and passwordbox
+  if(selections[questionCounter]!=-1) choose();
 
   // Validation, prompts user to choose
   if (isNaN(selections[questionCounter])) {
@@ -180,12 +181,13 @@ function createQuestionElement(index) {
     questionElement.append(radioButtons);
     // Uses a textbox instead of radio-buttons
   }else if(questions[index].type=="passwordbox"){
-    var passwordField = createTextField(index);
-    questionElement.append(passwordField);
-    // For the video
+  }else if(questions[index].type=="welcome"){
+    var welcome=$('<H3>Welcome!</H3><p><br>Please start the quiz by pressing next</p>');
+    questionElement.append(welcome);
+    selections[index]=-1;
+  }
   }else if(questions[index].type=="video"){
-    var passwordVideo = createVideo(index);
-    questionElement.append(passwordVideo);
+    	var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>'); 
   }
   return questionElement;
 }
