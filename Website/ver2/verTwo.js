@@ -187,7 +187,9 @@ function createQuestionElement(index) {
     selections[index]=-1;
   }
   }else if(questions[index].type=="video"){
-    	var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>'); 
+    	var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>');
+      questionElement.append(video);
+			selections[index]=-1; /*sets the value*/
   }
   return questionElement;
 }
@@ -207,20 +209,6 @@ function createRadios(index) {
   return radioList;
 }
 
-function createTextField(index) {
-  for (var i = 0; i < questions[index].choices.length; i++) {
-    var passField = $('<input type="password" placeholder="type in the password">');
-    var repeatPass = $('<input type="password" placeholder="type in the password again">');
-    var submitPass;
-    submitPass = '<input type="submit" value="Submit" />';
-    passField += questions[index].choices[i];
-    repeatPass.append(passField);
-  }
-  return passField;
-}
-
-function createVideo(index) {
-}
 
 function choose() {
   selections[questionCounter] = +$('input[name="answer"]:checked').val();
