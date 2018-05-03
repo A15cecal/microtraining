@@ -70,15 +70,6 @@ $(window, document, undefined).ready(function() {
   });
 
 });
-/*end animations user-form*/
-
-/*The user should be presented with the video first,
-the "next"-button should be gray:ed
-out and then fill in when the user finishes the video*/
-
-// implement some free text-areas, not just multimple choice
-/*NEED TO FIGURE OUT WHAT TO DO WITH THE VIDEO AND TEH FIRST question*/
-
 // This is for the quiz
 (function() {
   var questions = [{
@@ -170,14 +161,6 @@ out and then fill in when the user finishes the video*/
     displayNext();
   });
 
-  // Animates buttons on hover
-  /*im using hover in the css instead...*/
-  // $('.quizBtn').on('mouseenter', function () {
-  //   $(this).addClass('active');
-  // });
-  // $('.quizBtn').on('mouseleave', function () {
-  //   $(this).removeClass('active');
-  // });
 
   // This creates the div for the questions
   function createQuestionElement(index) {
@@ -236,8 +219,6 @@ out and then fill in when the user finishes the video*/
   }
 
   function createVideo(index) {
-    // var videoContainer = $('<div id="videoContainer" />');
-    // var repeatPass = $('<iframe width="420" height="315" src="https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1"/>');
   }
 
   function choose() {
@@ -293,8 +274,6 @@ out and then fill in when the user finishes the video*/
 
 })();
 // End quiz
-
-/*THIS WILL BE HERE FOR NOW, NOT REALLY IMPLEMENTED YET*/
 /*For the confirm password*/
 var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
 
