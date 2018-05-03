@@ -63,18 +63,11 @@ a {
 
 .masthead {
   display: table;
-
   width: 100%;
   height: auto;
   padding: 200px 0;
-
   text-align: center;
-
   color: black;
-
-  /* background: url('img/background.jpg') no-repeat bottom center scroll; */
-  /* background-color: black; */
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,7 +78,7 @@ a {
 }
 
 .button {
-  background-color: white; /* Green */
+  background-color: white;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -109,10 +102,6 @@ a {
   color: white;
 }
 
-/*end landing page*/
-
-
-
 /* for the user-form*/
 #landingPage {
   width: 100%;
@@ -124,7 +113,6 @@ a {
 
 h1 { color: #636363;
   text-align:center;
-  /* margin-top: 4em; */
   font-weight: 300;
 }
 
@@ -317,40 +305,17 @@ input:focus ~ .highlight {
     opacity: 0;
   }
 }
-/* .username {
-top: 20%;
-left: 35%;
-width: 200px;
-height: 150px;
-position: absolute;
-}
-.submitBtn {
-display: block;
-} */
-/*end user form*/
 
-
-
-
-/*everything for the quiz*/
-/* .quizHeading {
-color: #000000;
-font-weight: bold;
-} */
 #Tutorial {
   display: none;
   width: 100%;
   margin-top: 50px;
-  /* margin: 4em auto; */
-  /* left: 5%; */
   position: absolute;
 }
 #title {
   text-align: center;
 }
 #container {
-  /*old attributes, New
-  ones are styled same as the form */
   width: 40%;
   min-height: 280px;
   margin: 4em auto;
@@ -359,15 +324,6 @@ font-weight: bold;
   color: #000000;
   border: 1px solid #ebebeb;
   box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px
-  /* width:40%;
-  margin:auto;
-  padding: 0 25px 40px 10px;
-  background-color: #1E90FF;
-  border:2px solid #B0E0E6;
-  border-radius:5px;
-  color: #FFFFFF;
-  font-weight: bold;
-  box-shadow: 5px 5px 5px #888; */
 }
 #quiz {
   text-indent: 50px;
@@ -385,17 +341,12 @@ font-weight: bold;
   position: relative;
   margin: auto;
   float: left;
-  /* position: relative;
-  left: 100px; */
 }
 
 #next {
   position: relative;
   margin: auto;
   overflow: hidden;
-  /* left: 300px;
-  bottom: 52px;
-  position: relative; */
 }
 
 .quizBtn {
@@ -408,16 +359,6 @@ font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
   margin: 5px;
-  /* border:1px solid;
-  border-radius:5px;
-  width: 40px;
-  padding-left:5px;
-  padding-right: 5px;
-  position: relative;
-  float:right;
-  background-color: #DCDCDC;
-  color: black;
-  margin: 0 2px 0 2px; */
 }
 
 
@@ -457,18 +398,10 @@ ul {
   text-align: center;
 }
 .video-container {
-  /* position: relative;
-  padding-bottom: 17.00%;
-  padding-top: 30px;
-  height: 10px;
-  overflow: hidden; */
 }
 
 .video-container iframe,
 .video-container object,
 .video-container embed {
-  /* position: absolute;
-  top: 0;
-  left: 850px; */
 }
 /*end video*/
