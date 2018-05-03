@@ -72,6 +72,12 @@ var questions = [{
   correctAnswer: 0,
   type: "welcome"
 }, {
+question: "https://www.youtube.com/embed/Fl72BJmzq-4?autoplay=1",
+choices: [],
+correctAnswer: 0,
+type: "video"
+
+}, {
   question: "Are special characters good to use in a password?",
   choices: ["Always", "Never"],
   correctAnswer: 0,
@@ -185,11 +191,11 @@ function createQuestionElement(index) {
     var welcome=$('<H3>Welcome!</H3><p><br>Please start the quiz by pressing next</p>');
     questionElement.append(welcome);
     selections[index]=-1;
-  }
   }else if(questions[index].type=="video"){
-    	var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>');
-      questionElement.append(video);
-			selections[index]=-1; /*sets the value*/
+      // Assign a value to selections so we are allowed to continue.
+    var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>');
+    questionElement.append(video);
+    selections[index]=-1;
   }
   return questionElement;
 }

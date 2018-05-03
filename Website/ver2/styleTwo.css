@@ -103,7 +103,15 @@ a {
 }
 
 /* for the user-form*/
-#landingPage {
+/* #landingPage {
+  width: 100%;
+  margin-top: 50px;
+  margin: 4em auto;
+  left: 5%;
+  position: absolute;
+} */
+
+#formCreate {
   width: 100%;
   margin-top: 50px;
   margin: 4em auto;
@@ -307,7 +315,7 @@ input:focus ~ .highlight {
 }
 
 #Tutorial {
-  display: none;
+  /* display: none; */
   width: 100%;
   margin-top: 50px;
   position: absolute;
