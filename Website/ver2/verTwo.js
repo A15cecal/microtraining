@@ -8,15 +8,9 @@ function showTutorial() {
   //   x.style.display = "block";
   // }
 }
-$(document).ready(function() {
-  $(".takeQuizText").click(function() {
-    $("#landingPage").hide(1000);
-  });
-});
-
 /* show/hide for the form-div*/
 function showRegistration() {
-  var x = document.getElementById("landingPage");
+  var x = document.getElementById("formCreate");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -71,7 +65,7 @@ $(window, document, undefined).ready(function() {
 
 });
 // This is for the quiz
-(function() {
+
   var questions = [{
     question: "Are special characters good to use in a password?",
     choices: ["Always", "Never"],
