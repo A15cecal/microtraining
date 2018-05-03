@@ -278,3 +278,12 @@ function validatePassword() {
 // password.onchange = validatePassword;
 // confirm_password.onkeyup = validatePassword;
 /*End confirm password*/
+
+
+$(document).ready(function() {
+  alert("Hello!");
+	$(".takeQuizText").click(function() {
+		alert("TakeQuiz");
+		$("#Tutorial").show(1000);
+  });
+});
