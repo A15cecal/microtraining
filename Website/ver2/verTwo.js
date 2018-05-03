@@ -1,12 +1,12 @@
 
 /* show/hide for the quiz-div*/
 function showTutorial() {
-  var x = document.getElementById("Tutorial");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  // var x = document.getElementById("Tutorial");
+  // if (x.style.display === "block") {
+  //   x.style.display = "none";
+  // } else {
+  //   x.style.display = "block";
+  // }
 }
 $(document).ready(function() {
   $(".takeQuizText").click(function() {
