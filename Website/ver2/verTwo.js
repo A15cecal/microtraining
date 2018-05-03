@@ -261,7 +261,8 @@ function displayScore() {
   return score;
 }
 
-})();
+// displays the first question
+displayNext();
 // End quiz
 /*For the confirm password*/
 var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
@@ -273,7 +274,7 @@ function validatePassword() {
     confirm_password.setCustomValidity('');
   }
 }
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+//
+// password.onchange = validatePassword;
+// confirm_password.onkeyup = validatePassword;
 /*End confirm password*/
