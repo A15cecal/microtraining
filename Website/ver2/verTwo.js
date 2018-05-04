@@ -120,6 +120,14 @@ var selections = []; //Array containing the position of made choices
 var quiz = $('#quiz'); //Quiz div
 // $("#quiz").delay(60000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
 
+/*for saving the password*/
+var passArray = [];
+function savePass() {
+   passArray.push(document.getElementById("passwordbox").value);
+   console.log(passArray); //to confirm it has been added to the array
+}
+
+
 // Display question
 // displayNext();
 
@@ -186,7 +194,7 @@ function createQuestionElement(index) {
     questionElement.append(radioButtons);
     // Uses a textbox instead of radio-buttons
   }else if(questions[index].type=="passwordbox"){
-    var passwordbox=$('<div id="passwordbox"><input type="password"></div>');
+    var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass()"></div>');
     questionElement.append(passwordbox);
     selections[index]=-1;
   }else if(questions[index].type=="welcome"){
@@ -282,7 +290,10 @@ function validatePassword() {
     confirm_password.setCustomValidity('');
   }
 }
-//
+
+function getPassword() {
+  var SavePass = document.getElementById();
+}
 // password.onchange = validatePassword;
 // confirm_password.onkeyup = validatePassword;
 /*End confirm password*/
