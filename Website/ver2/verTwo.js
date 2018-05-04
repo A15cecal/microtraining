@@ -9,22 +9,22 @@ function showTutorial() {
   // }
 }
 /* show/hide for the form-div*/
-function showRegistration() {
-  var x = document.getElementById("formCreate");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-$(document).ready(function() {
-  $(".goBackText").click(function() {
-    $("#Tutorial").hide(1000);
-  });
-});
+// function showRegistration() {
+//   var x = document.getElementById("formCreate");
+//   if (x.style.display === "block") {
+//     x.style.display = "none";
+//   } else {
+//     x.style.display = "block";
+//   }
+// }
+// $(document).ready(function() {
+//   $(".goBackText").click(function() {
+//     $("#Tutorial").hide(1000);
+//   });
+// });
 
 /*for the video, shows the div for set amount of time*/
-jQuery("#infor").delay(60000).fadeOut("slow");
+// jQuery("#infor").delay(60000).fadeOut("slow");
 /*end video*/
 
 
@@ -67,12 +67,12 @@ $(window, document, undefined).ready(function() {
 // This is for the quiz
 
 var questions = [{
-  question: "Take a quiz",
+  question: "Welcome",
   choices: [],
   correctAnswer: 0,
   type: "welcome"
 }, {
-question: "https://www.youtube.com/embed/Fl72BJmzq-4?autoplay=1",
+question: "https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1",
 choices: [],
 correctAnswer: 0,
 type: "video"
@@ -126,7 +126,6 @@ var quiz = $('#quiz'); //Quiz div
 // Click handler for the 'next' button
 $('#next').on('click', function (e) {
   e.preventDefault();
-
   // handeling the fade-animation
   if(quiz.is(':animated')) {
     return false;
@@ -174,11 +173,11 @@ function createQuestionElement(index) {
     id: 'question'
   });
   // Creates the question-header
-  var header = $('<h2>Question ' + (index + 1) + ':</h2>');
-  questionElement.append(header);
+  // var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+  // questionElement.append(header);
 
   // Creates the question-text
-  var question = $('<p>').append(questions[index].question);
+  var question = $('<h3 id="questionText">').append(questions[index].question);
   questionElement.append(question);
 
   // the radio-buttons
@@ -187,13 +186,16 @@ function createQuestionElement(index) {
     questionElement.append(radioButtons);
     // Uses a textbox instead of radio-buttons
   }else if(questions[index].type=="passwordbox"){
+    var passwordbox=$('<div id="passwordbox"><input type="password"></div>');
+    questionElement.append(passwordbox);
+    selections[index]=-1;
   }else if(questions[index].type=="welcome"){
-    var welcome=$('<H3>Welcome!</H3><p><br>Please start the quiz by pressing next</p>');
+    var welcome=$('<div id="welcomePage"><p>Please start the quiz by pressing next</p><br></div>');
     questionElement.append(welcome);
     selections[index]=-1;
   }else if(questions[index].type=="video"){
-      // Assign a value to selections so we are allowed to continue.
-    var video=$('<iframe width="420" height="315" src="'+questions[index].question+'"></iframe>');
+    /*how do I remove the URL so that it doesn't show???*/
+    var video=$('<iframe id="videoFrame" width="520" height="315" src="'+questions[index].question+'"></iframe>');
     questionElement.append(video);
     selections[index]=-1;
   }
@@ -285,11 +287,10 @@ function validatePassword() {
 // confirm_password.onkeyup = validatePassword;
 /*End confirm password*/
 
-
-$(document).ready(function() {
-  alert("Hello!");
-	$(".takeQuizText").click(function() {
-		alert("TakeQuiz");
-		$("#Tutorial").show(1000);
-  });
-});
+//
+// $(document).ready(function() {
+// 	$(".takeQuizText").click(function() {
+// 		alert("TakeQuiz");
+// 		$("#Tutorial").show(1000);
+//   });
+// });
