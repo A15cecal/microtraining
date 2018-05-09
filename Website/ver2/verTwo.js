@@ -185,8 +185,10 @@ function createQuestionElement(index) {
   // questionElement.append(header);
 
   // Creates the question-text
+  if(questions[index].type!=="video"){
   var question = $('<h3 id="questionText">').append(questions[index].question);
   questionElement.append(question);
+}
 
   // the radio-buttons
   if(questions[index].type=="multiple"){
