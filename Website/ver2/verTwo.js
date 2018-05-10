@@ -138,18 +138,44 @@ $('#next').on('click', function (e) {
   if(quiz.is(':animated')) {
     return false;
   }
-  // gets the input if not -1, which is true for video and passwordbox
-  if(selections[questionCounter]!=-1) choose();
+  // gets the input if not -1 or -2, which is true for video and passwordbox
+  // if(selections[questionCounter]!=-1) choose();
+  if(selections[questionCounter]!=-1 && -2) choose();
 
   // Validation, prompts user to choose
-  if (isNaN(selections[questionCounter])) {
-    alert('Please make a selection!');
-  } else {
-    questionCounter++;
-    displayNext();
+  // if (isNaN(selections[questionCounter])) {
+  if ((selections[questionCounter] != -1) && (selections[questionCounter] != -2))
+  {
+      if (document.getElementById("radioBtn").checked != true)
+      {
+          alert('Please make a selection!');
+      }
+      else
+      {
+          if (document.getElementById("radioBtn").checked != false)
+          {
+              alert('checked');
+              questionCounter++;
+              displayNext();
+          }
+      }
   }
-});
+  else
+  {
+      questionCounter++;
+      displayNext();
+      alert('hej');
+  }
 
+//
+//   function check() {
+//     document.getElementById("radioBtn").checked = true;
+// }
+//
+// function uncheck() {
+//     document.getElementById("radioBtn").checked = false;
+// }
+  });
 // Click-handler for the 'prev' button
 $('#prev').on('click', function (e) {
   e.preventDefault();
@@ -198,7 +224,8 @@ function createQuestionElement(index) {
   }else if(questions[index].type=="passwordbox"){
     var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass()"></div>');
     questionElement.append(passwordbox);
-    selections[index]=-1;
+    selections[index]=-2;
+    selections[questionCounter].getElementById("passwordbox").value;
   }else if(questions[index].type=="welcome"){
     var welcome=$('<div id="welcomePage"><p>Please start the quiz by pressing next</p><br></div>');
     questionElement.append(welcome);
@@ -219,7 +246,7 @@ function createRadios(index) {
   var input = '';
   for (var i = 0; i < questions[index].choices.length; i++) {
     item = $('<li>');
-    input = '<input type="radio" name="answer" value=' + i + ' />';
+    input = '<input id="radioBtn" type="radio" name="answer" value=' + i + ' />';
     input += questions[index].choices[i];
     item.append(input);
     radioList.append(item);
