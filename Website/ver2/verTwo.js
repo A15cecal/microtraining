@@ -139,33 +139,33 @@ $('#next').on('click', function (e) {
     return false;
   }
   // gets the input if not -1 or -2, which is true for video and passwordbox
-  // if(selections[questionCounter]!=-1) choose();
   if(selections[questionCounter]!=-1 && -2) choose();
 
   // Validation, prompts user to choose
   // if (isNaN(selections[questionCounter])) {
-  if ((selections[questionCounter] != -1) && (selections[questionCounter] != -2))
-  {
-      if (document.getElementById("radioBtn").checked != true)
-      {
+  if ((selections[questionCounter] != -1) && (selections[questionCounter] != -2)) {
+
+    // if ((selections[questionCounter] = -2) && document.getElementById("passwordbox")) {
+    //  alert("Type in a password!");
+    // }
+      if (document.getElementById("radioBtn").checked != true) {
           alert('Please make a selection!');
-      }
-      else
-      {
-          if (document.getElementById("radioBtn").checked != false)
-          {
+      } else {
+          if (document.getElementById("radioBtn").checked != false) {
               alert('checked');
               questionCounter++;
               displayNext();
           }
       }
-  }
-  else
-  {
+  } else {
       questionCounter++;
       displayNext();
-      alert('hej');
+      // alert('hej');
   }
+
+
+
+
 
 //
 //   function check() {
@@ -216,16 +216,15 @@ function createQuestionElement(index) {
   questionElement.append(question);
 }
 
-  // the radio-buttons
   if(questions[index].type=="multiple"){
     var radioButtons = createRadios(index);
     questionElement.append(radioButtons);
     // Uses a textbox instead of radio-buttons
   }else if(questions[index].type=="passwordbox"){
-    var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass()"></div>');
+    var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass()" required></div>');
     questionElement.append(passwordbox);
     selections[index]=-2;
-    selections[questionCounter].getElementById("passwordbox").value;
+    // selections[questionCounter].getElementById("passwordbox").value;
   }else if(questions[index].type=="welcome"){
     var welcome=$('<div id="welcomePage"><p>Please start the quiz by pressing next</p><br></div>');
     questionElement.append(welcome);
