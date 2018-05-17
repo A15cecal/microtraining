@@ -139,7 +139,7 @@ $('#next').on('click', function (e) {
     return false;
   }
   // gets the input if not -1 or -2, which is true for video and passwordbox
-  if(selections[questionCounter]!=-1 && -2) choose();
+  if((selections[questionCounter]!=-1) && (selections[questionCounter] -2)) choose();
 
   // Validation, prompts user to choose
   // if (isNaN(selections[questionCounter])) {
