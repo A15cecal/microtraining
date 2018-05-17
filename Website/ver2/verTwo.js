@@ -158,6 +158,9 @@ $('#next').on('click', function (e) {
           }
       }
   } else {
+    if (selections[questionCounter] == -2) {
+      selections[questionCounter]=getElementById("passwordbox");
+    }
       questionCounter++;
       displayNext();
       // alert('hej');
