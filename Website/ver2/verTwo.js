@@ -72,10 +72,10 @@ var questions = [{
   correctAnswer: 0,
   type: "welcome"
 }, {
-question: "https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1",
-choices: [],
-correctAnswer: 0,
-type: "video"
+  question: "https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1",
+  choices: [],
+  correctAnswer: 0,
+  type: "video"
 
 }, {
   question: "Are special characters good to use in a password?",
@@ -108,10 +108,10 @@ type: "video"
   correctAnswer: 0,
   type: "multiple"
 }, {
-question: "https://www.youtube.com/embed/Fl72BJmzq-4?autoplay=1",
-choices: [],
-correctAnswer: 0,
-type: "video"
+  question: "https://www.youtube.com/embed/Fl72BJmzq-4?autoplay=1",
+  choices: [],
+  correctAnswer: 0,
+  type: "video"
 
 }];
 
@@ -123,8 +123,8 @@ var quiz = $('#quiz'); //Quiz div
 /*for saving the password*/
 var passArray = [];
 function savePass() {
-   passArray.push(document.getElementById("passwordbox").value);
-   console.log(passArray); //to confirm it has been added to the array
+  passArray.push(document.getElementById("passwordbox").value);
+  console.log(passArray); //to confirm it has been added to the array
 }
 
 
@@ -148,22 +148,22 @@ $('#next').on('click', function (e) {
     // if ((selections[questionCounter] = -2) && document.getElementById("passwordbox")) {
     //  alert("Type in a password!");
     // }
-      if (document.getElementById("radioBtn").checked != true) {
-          alert('Please make a selection!');
-      } else {
-          if (document.getElementById("radioBtn").checked != false) {
-              alert('checked');
-              questionCounter++;
-              displayNext();
-          }
+    if (document.getElementById("radioBtn").checked != true) {
+      alert('Please make a selection!');
+    } else {
+      if (document.getElementById("radioBtn").checked != false) {
+        alert('checked');
+        questionCounter++;
+        displayNext();
       }
+    }
   } else {
     if (selections[questionCounter] == -2) {
-      selections[questionCounter]=getElementById("passwordbox");
+      document.getElementById("passwordbox");
     }
-      questionCounter++;
-      displayNext();
-      // alert('hej');
+    questionCounter++;
+    displayNext();
+    // alert('hej');
   }
   console.log(selections);
 
@@ -171,15 +171,15 @@ $('#next').on('click', function (e) {
 
 
 
-//
-//   function check() {
-//     document.getElementById("radioBtn").checked = true;
-// }
-//
-// function uncheck() {
-//     document.getElementById("radioBtn").checked = false;
-// }
-  });
+  //
+  //   function check() {
+  //     document.getElementById("radioBtn").checked = true;
+  // }
+  //
+  // function uncheck() {
+  //     document.getElementById("radioBtn").checked = false;
+  // }
+});
 // Click-handler for the 'prev' button
 $('#prev').on('click', function (e) {
   e.preventDefault();
@@ -216,9 +216,9 @@ function createQuestionElement(index) {
 
   // Creates the question-text
   if(questions[index].type!=="video"){
-  var question = $('<h3 id="questionText">').append(questions[index].question);
-  questionElement.append(question);
-}
+    var question = $('<h3 id="questionText">').append(questions[index].question);
+    questionElement.append(question);
+  }
 
   if(questions[index].type=="multiple"){
     var radioButtons = createRadios(index);
