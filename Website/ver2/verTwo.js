@@ -148,23 +148,22 @@ $('#next').on('click', function (e) {
     // if ((selections[questionCounter] = -2) && document.getElementById("passwordbox")) {
     //  alert("Type in a password!");
     // }
-    if (document.getElementById("radioBtn").checked != true) {
-      alert('Please make a selection!');
-    } else {
-      if (document.getElementById("radioBtn").checked != false) {
-        alert('checked');
-        questionCounter++;
-        displayNext();
-      }
-    }
-  } else {
-    if (selections[questionCounter] == -2) {
-      document.getElementById("passwordbox");
-    }
-    questionCounter++;
-    displayNext();
-    // alert('hej');
-  }
+    if (isNaN(selections[questionCounter])) {
+                   alert('Please make a selection!');
+           } else {
+                   questionCounter++;
+                   displayNext();
+                  }
+
+          } else {
+       if (selections[questionCounter] == -2) {
+
+  selections[questionCounter]=document.getElementById("passwordbox").value;
+       }
+         questionCounter++;
+         displayNext();
+         // alert('hej');
+     }
   console.log(selections);
 
 
