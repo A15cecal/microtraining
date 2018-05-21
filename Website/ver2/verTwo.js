@@ -1,33 +1,4 @@
 
-/* show/hide for the quiz-div*/
-function showTutorial() {
-  // var x = document.getElementById("Tutorial");
-  // if (x.style.display === "block") {
-  //   x.style.display = "none";
-  // } else {
-  //   x.style.display = "block";
-  // }
-}
-/* show/hide for the form-div*/
-// function showRegistration() {
-//   var x = document.getElementById("formCreate");
-//   if (x.style.display === "block") {
-//     x.style.display = "none";
-//   } else {
-//     x.style.display = "block";
-//   }
-// }
-// $(document).ready(function() {
-//   $(".goBackText").click(function() {
-//     $("#Tutorial").hide(1000);
-//   });
-// });
-
-/*for the video, shows the div for set amount of time*/
-// jQuery("#infor").delay(60000).fadeOut("slow");
-/*end video*/
-
-
 /*For the animations of the user-form*/
 $(window, document, undefined).ready(function() {
 
@@ -42,7 +13,7 @@ $(window, document, undefined).ready(function() {
   var $ripples = $('.ripples');
 
   $ripples.on('click.Ripples', function(e) {
-
+    
     var $this = $(this);
     var $offset = $this.parent().offset();
     var $circle = $this.find('.ripplesCircle');
@@ -56,15 +27,12 @@ $(window, document, undefined).ready(function() {
     });
 
     $this.addClass('is-active');
-
   });
 
   $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
     $(this).removeClass('is-active');
   });
-
 });
-// This is for the quiz
 
 var questions = [{
   question: "Welcome",
@@ -76,7 +44,6 @@ var questions = [{
   choices: [],
   correctAnswer: 0,
   type: "video"
-
 }, {
   question: "Are special characters good to use in a password?",
   choices: ["Always", "Never"],
@@ -112,7 +79,6 @@ var questions = [{
 var questionCounter = 0; //This is for keeping track of the question-number
 var selections = []; //Array containing the position of made choices
 var quiz = $('#quiz'); //Quiz div
-// $("#quiz").delay(60000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
 
 /*for saving the password*/
 var passArray = [];
@@ -184,9 +150,6 @@ function createQuestionElement(index) {
   var questionElement = $('<div>', {
     id: 'question'
   });
-  // Creates the question-header
-  // var header = $('<h2>Question ' + (index + 1) + ':</h2>');
-  // questionElement.append(header);
 
   // Creates the question-text
   if(questions[index].type!=="video"){
@@ -202,13 +165,11 @@ function createQuestionElement(index) {
     var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass();" required></div>');
     questionElement.append(passwordbox);
     selections[index]=-2;
-    // selections[questionCounter].getElementById("passwordbox").value;
   }else if(questions[index].type=="welcome"){
     var welcome=$('<div id="welcomePage"><p>Please start the quiz by pressing next</p><br></div>');
     questionElement.append(welcome);
     selections[index]=-1;
   }else if(questions[index].type=="video"){
-    /*how do I remove the URL so that it doesn't show???*/
     var video=$('<iframe id="videoFrame" width="520" height="315" src="'+questions[index].question+'"></iframe>');
     questionElement.append(video);
     selections[index]=-1;
@@ -271,8 +232,6 @@ function displayScore() {
 
   var numCorrect = 0;
   for (var i = 0; i < selections.length; i++) {
-    //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
-    // alert(questions[i].choices[selections[i]]);
     if (selections[i] == questions[i].correctAnswer) {
       numCorrect++;
     }
@@ -285,7 +244,6 @@ function displayScore() {
 
 // displays the first question
 displayNext();
-// End quiz
 /*For the confirm password*/
 var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
 
@@ -300,14 +258,3 @@ function validatePassword() {
 function getPassword() {
   var SavePass = document.getElementById();
 }
-// password.onchange = validatePassword;
-// confirm_password.onkeyup = validatePassword;
-/*End confirm password*/
-
-//
-// $(document).ready(function() {
-// 	$(".takeQuizText").click(function() {
-// 		alert("TakeQuiz");
-// 		$("#Tutorial").show(1000);
-//   });
-// });

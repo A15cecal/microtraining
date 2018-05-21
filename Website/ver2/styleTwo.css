@@ -90,16 +90,10 @@ a {
   color: white;
 }
 
-/* for the user-form*/
-/* #landingPage {
-width: 100%;
-margin-top: 50px;
-margin: 4em auto;
-left: 5%;
-position: absolute;
-} */
-
 #questionText {
+  text-align: center;
+}
+p#question {
   text-align: center;
 }
 #welcomePage {
@@ -156,9 +150,6 @@ form {
 
 .formInput:focus { outline: none; }
 
-
-/* Label */
-
 label {
   color: #999;
   font-size: 18px;
@@ -170,18 +161,12 @@ label {
   transition: all 0.2s ease;
 }
 
-
-/* active */
-
 input:focus ~ label, input.used ~ label {
   top: -20px;
   transform: scale(.75); left: -2px;
   /* font-size: 14px; */
   color: #4a89dc;
 }
-
-
-/* Underline */
 
 .bar {
   position: relative;
@@ -203,13 +188,7 @@ input:focus ~ label, input.used ~ label {
 
 .bar:after { right: 50%; }
 
-
-/* active */
-
 input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
-
-
-/* Highlight */
 
 .highlight {
   position: absolute;
@@ -220,9 +199,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
   pointer-events: none;
   opacity: 0.5;
 }
-
-
-/* active */
 
 input:focus ~ .highlight {
   animation: inputHighlighter 0.3s ease;
@@ -235,9 +211,6 @@ input:focus ~ .highlight {
   from { background: #4a89dc; }
   to 	{ width: 0; background: transparent; }
 }
-
-
-/* Button */
 
 .buttonBlue {
   position: relative;
@@ -258,20 +231,18 @@ input:focus ~ .highlight {
   cursor: pointer;
   transition: all 0.15s ease;
 }
-.buttonBlue:focus { outline: 0; }
-
-
-/* Button modifiers */
+.buttonBlue:focus {
+  outline: 0;
+}
 
 .buttonBlue {
   background: #4a89dc;
   text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
 
-.buttonBlue:hover { background: #357bd8; }
-
-
-/* Ripples container */
+.buttonBlue:hover {
+  background: #357bd8;
+}
 
 .ripples {
   position: absolute;
@@ -282,9 +253,6 @@ input:focus ~ .highlight {
   overflow: hidden;
   background: transparent;
 }
-
-
-/* Ripples circle */
 
 .ripplesCircle {
   position: absolute;
@@ -301,9 +269,6 @@ input:focus ~ .highlight {
 .ripples.is-active .ripplesCircle {
   animation: ripples .4s ease-in;
 }
-
-
-/* Ripples animation */
 
 @keyframes ripples {
   0% { opacity: 0; }
@@ -377,12 +342,10 @@ input:focus ~ .highlight {
   margin: 5px;
 }
 
-
 .quizBtn:hover {
   background-color: #357bd8;
   color: #ffffff;
 }
-
 
 .quizBtn a {
   text-decoration: none;
@@ -393,18 +356,7 @@ ul {
   padding: 0;
   margin: 0;
 }
-/* .takeQuizText {
-cursor: pointer;
-text-decoration: underline;
-color: blue;
-} */
-/*this is for going back to the form*/
-/* .goBackText {
-cursor: pointer;
-text-decoration: underline;
-color: blue;
-} */
+
 .centerText {
   text-align: center;
 }
-/* End quiz */
