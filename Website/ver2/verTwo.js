@@ -107,12 +107,6 @@ var questions = [{
   choices: ["Never", "Always"],
   correctAnswer: 0,
   type: "multiple"
-}, {
-  question: "https://www.youtube.com/embed/Fl72BJmzq-4?autoplay=1",
-  choices: [],
-  correctAnswer: 0,
-  type: "video"
-
 }];
 
 var questionCounter = 0; //This is for keeping track of the question-number
@@ -128,9 +122,6 @@ function savePass() {
 }
 
 
-// Display question
-// displayNext();
-
 // Click handler for the 'next' button
 $('#next').on('click', function (e) {
   e.preventDefault();
@@ -142,43 +133,27 @@ $('#next').on('click', function (e) {
   if((selections[questionCounter]!=-1) && (selections[questionCounter] !=-2)) choose();
 
   // Validation, prompts user to choose
-  // if (isNaN(selections[questionCounter])) {
   if ((selections[questionCounter] != -1) && (selections[questionCounter] != -2)) {
-
-    // if ((selections[questionCounter] = -2) && document.getElementById("passwordbox")) {
-    //  alert("Type in a password!");
-    // }
     if (isNaN(selections[questionCounter])) {
-                   alert('Please make a selection!');
-           } else {
-                   questionCounter++;
-                   displayNext();
-                  }
+      alert('Please make a selection!');
+    } else {
+      questionCounter++;
+      displayNext();
+    }
 
-          } else {
-       if (selections[questionCounter] == -2) {
-
-  selections[questionCounter]=document.getElementById("passwordbox").value;
-       }
-         questionCounter++;
-         displayNext();
-         // alert('hej');
-     }
+  } else {
+    if (selections[questionCounter] == -2) {
+      selections[questionCounter]=document.getElementById("passwordbox").value;
+      // alert('Empty textbox');
+      // return false;
+    }
+    questionCounter++;
+    displayNext();
+  }
   console.log(selections);
-
-
-
-
-
-  //
-  //   function check() {
-  //     document.getElementById("radioBtn").checked = true;
-  // }
-  //
-  // function uncheck() {
-  //     document.getElementById("radioBtn").checked = false;
-  // }
 });
+
+
 // Click-handler for the 'prev' button
 $('#prev').on('click', function (e) {
   e.preventDefault();
@@ -224,7 +199,7 @@ function createQuestionElement(index) {
     questionElement.append(radioButtons);
     // Uses a textbox instead of radio-buttons
   }else if(questions[index].type=="passwordbox"){
-    var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass()" required></div>');
+    var passwordbox=$('<div id="passdiv"><input type="password" id="passwordbox" onchange="savePass();" required></div>');
     questionElement.append(passwordbox);
     selections[index]=-2;
     // selections[questionCounter].getElementById("passwordbox").value;
@@ -297,7 +272,7 @@ function displayScore() {
   var numCorrect = 0;
   for (var i = 0; i < selections.length; i++) {
     //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
-    alert(questions[i].choices[selections[i]]);
+    // alert(questions[i].choices[selections[i]]);
     if (selections[i] == questions[i].correctAnswer) {
       numCorrect++;
     }
