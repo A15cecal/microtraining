@@ -13,7 +13,7 @@ $(window, document, undefined).ready(function() {
   var $ripples = $('.ripples');
 
   $ripples.on('click.Ripples', function(e) {
-    
+
     var $this = $(this);
     var $offset = $this.parent().offset();
     var $circle = $this.find('.ripplesCircle');
@@ -45,6 +45,11 @@ var questions = [{
   correctAnswer: 0,
   type: "video"
 }, {
+  question: "Please suggest a possible password",
+  choices: [],
+  correctAnswer: 0,
+  type: "passwordbox"
+}, {
   question: "Are special characters good to use in a password?",
   choices: ["Always", "Never"],
   correctAnswer: 0,
@@ -60,20 +65,25 @@ var questions = [{
   correctAnswer: 0,
   type: "multiple"
 }, {
-  question: "Please suggest a possible password",
-  choices: [],
-  correctAnswer: 0,
-  type: "passwordbox"
-}, {
   question: "Which one is the strongest password?",
   choices: ["wqerty123", "BluBB", "Alex!993", "Hulrlr500!?", "IlikeBuTTerFlies"],
   correctAnswer: 3,
+  type: "multiple"
+}, {
+  question: "What's your level of experience with computers?",
+  choices: ["Advanced", "Intermediate", "Basic", "Fundamental"],
+  correctAnswer: 0,
   type: "multiple"
 }, {
   question: "Should a passwordy consist of a common word?",
   choices: ["Never", "Always"],
   correctAnswer: 0,
   type: "multiple"
+}, {
+  question: "Please suggest a new possible password",
+  choices: [],
+  correctAnswer: 0,
+  type: "passwordbox"
 }];
 
 var questionCounter = 0; //This is for keeping track of the question-number
@@ -110,8 +120,6 @@ $('#next').on('click', function (e) {
   } else {
     if (selections[questionCounter] == -2) {
       selections[questionCounter]=document.getElementById("passwordbox").value;
-      // alert('Empty textbox');
-      // return false;
     }
     questionCounter++;
     displayNext();
@@ -228,33 +236,10 @@ function displayNext() {
 
 // counts the score and returns it in a p-element
 function displayScore() {
-  var score = $('<p>',{id: 'question'});
-
-  var numCorrect = 0;
-  for (var i = 0; i < selections.length; i++) {
-    if (selections[i] == questions[i].correctAnswer) {
-      numCorrect++;
-    }
-  }
-
-  score.append('You got ' + numCorrect + ' questions out of ' +
-  questions.length + ' right!!!');
+  var score = $('<h3>',{id: 'question'});
+  score.append('Thank you for your participation!');
   return score;
 }
 
 // displays the first question
 displayNext();
-/*For the confirm password*/
-var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
-
-function validatePassword() {
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-function getPassword() {
-  var SavePass = document.getElementById();
-}

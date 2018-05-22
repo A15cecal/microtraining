@@ -93,8 +93,10 @@ a {
 #questionText {
   text-align: center;
 }
-p#question {
+h3#question {
   text-align: center;
+  margin: 80px;
+  margin-left: 50px;
 }
 #welcomePage {
   text-align: center;
