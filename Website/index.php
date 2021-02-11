@@ -12,7 +12,7 @@
   $fileWrite = '';
   $myFile = "passwords.txt";
   if(isset($_POST['writeToFile']) && !empty($_POST['writeToFile'])) {
-  $fileWrite = $_POST['writeToFile'].PHP_EOL;
+  $fileWrite = $_POST['writeToFile'] . date(' | Y-m-d h:i:sa ').PHP_EOL;
   }
   if($fileWrite) {
   $fh = fopen($myFile, 'a') or die("can't open file"); //Make sure you have permission
