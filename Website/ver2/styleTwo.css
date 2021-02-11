@@ -1,0 +1,364 @@
+
+
+body {
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-image: url('img/background.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #e8f2f0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 25px;
+  @media(min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 35px;
+  }
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+.masthead {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .intro-text {
+    font-size: 18px;
+  }
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btn1 {
+  background-color: #4CAF50;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.btn1:hover {
+  background-color: #337736;
+  color: white;
+}
+
+#questionText {
+  text-align: center;
+}
+h3#question {
+  text-align: center;
+  margin: 80px;
+  margin-left: 50px;
+}
+#welcomePage {
+  text-align: center;
+}
+#videoFrame {
+  position: relative;
+  left: 40px;
+}
+#passdiv {
+  text-align: center;
+}
+
+#formCreate {
+  width: 100%;
+  margin-top: 50px;
+  margin: 4em auto;
+  left: 5%;
+  position: absolute;
+}
+
+h1 {
+  color: #636363;
+  text-align:center;
+  font-weight: 300;
+}
+
+form {
+  width: 380px;
+  margin: 4em auto;
+  padding: 3em 2em 2em 2em;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.formInput {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  -webkit-appearance: none;
+  display: block;
+  background: #fafafa;
+  color: #636363;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #757575;
+}
+
+.formInput:focus { outline: none; }
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: all 0.2s ease;
+}
+
+input:focus ~ label, input.used ~ label {
+  top: -20px;
+  transform: scale(.75); left: -2px;
+  /* font-size: 14px; */
+  color: #4a89dc;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #4a89dc;
+  transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+  from { background: #4a89dc; }
+  to 	{ width: 0; background: transparent; }
+}
+
+.buttonBlue {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #3160B6;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.buttonBlue:focus {
+  outline: 0;
+}
+
+.buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonBlue:hover {
+  background: #357bd8;
+}
+
+.ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.ripplesCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+  animation: ripples .4s ease-in;
+}
+
+@keyframes ripples {
+  0% { opacity: 0; }
+
+  25% { opacity: 1; }
+
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}
+
+#Tutorial {
+  min-width: 700px;
+  max-width: 900px;
+  min-height: 300px;
+  margin-top: 50px;
+  left: 23%;
+  position: absolute;
+  background-color: #dbfffc26;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#title {
+  text-align: center;
+}
+#container {
+  width: 40%;
+  min-height: 280px;
+  margin: 4em auto;
+  padding. 3em 2em 2em 2em;
+  background-color: #fafafa;
+  color: #000000;
+  border: 1px solid #ebebeb;
+  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px
+}
+#quiz {
+  text-indent: 50px;
+  display:none;
+}
+
+#centerBtns {
+  width:100%;
+  top: 6px;
+  left: 110px;
+  position: relative;
+  padding: 20px;
+}
+#prev {
+  display:none;
+  position: relative;
+  margin: auto;
+  float: left;
+}
+
+#next {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.quizBtn {
+  text-align: center;
+  background-color: #4a89dc;
+  color: white;
+  width: 100px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.quizBtn:hover {
+  background-color: #357bd8;
+  color: #ffffff;
+}
+
+.quizBtn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.centerText {
+  text-align: center;
+}

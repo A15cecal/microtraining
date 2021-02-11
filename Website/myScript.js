@@ -1,4 +1,5 @@
 
+/* show/hide for the quiz-div*/
 function showTutorial() {
   var x = document.getElementById("Tutorial");
   if (x.style.display === "block") {
@@ -7,35 +8,105 @@ function showTutorial() {
     x.style.display = "block";
   }
 }
+$(document).ready(function() {
+  $(".takeQuizText").click(function() {
+    $("#formCreate").hide(1000);
+  });
+});
 
+/* show/hide for the form-div*/
+function showRegistration() {
+  var x = document.getElementById("formCreate");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+$(document).ready(function() {
+  $(".goBackText").click(function() {
+    $("#Tutorial").hide(1000);
+  });
+});
+
+/*for the video, shows the div for set amount of time*/
+jQuery("#infor").delay(60000).fadeOut("slow");
+/*end video*/
+
+
+/*For the animations of the user-form*/
+$(window, document, undefined).ready(function() {
+
+  $('input').blur(function() {
+    var $this = $(this);
+    if ($this.val())
+    $this.addClass('used');
+    else
+    $this.removeClass('used');
+  });
+
+  var $ripples = $('.ripples');
+
+  $ripples.on('click.Ripples', function(e) {
+
+    var $this = $(this);
+    var $offset = $this.parent().offset();
+    var $circle = $this.find('.ripplesCircle');
+
+    var x = e.pageX - $offset.left;
+    var y = e.pageY - $offset.top;
+
+    $circle.css({
+      top: y + 'px',
+      left: x + 'px'
+    });
+
+    $this.addClass('is-active');
+
+  });
+
+  $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
+    $(this).removeClass('is-active');
+  });
+
+});
+/*end animations user-form*/
+
+/*The user should be presented with the video first,
+the "next"-button should be gray:ed
+out and then fill in when the user finishes the video*/
+
+// implement some free text-areas, not just multimple choice
+/*NEED TO FIGURE OUT WHAT TO DO WITH THE VIDEO AND TEH FIRST question*/
 
 // This is for the quiz
 (function() {
   var questions = [{
-    question: "What is 2+5?",
-    choices: [2, 5, 7, 15, 20],
-    correctAnswer: 7
+    question: "Are special characters good to use in a password?",
+    choices: ["Always", "Never"],
+    correctAnswer: 0
   }, {
-    question: "What is 3+6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 9
+    question: "How many characters should a password consist of?",
+    choices: ["less than 3", 6, 8, 12, "Preferably more than 12"],
+    correctAnswer: 4
   }, {
-    question: "What is 8-7?",
-    choices: [72, 99, 1, 134, 156],
-    correctAnswer: 1
+    question: "Should you combine capital and lowercase letters?",
+    choices: ["yes", "no"],
+    correctAnswer: 0
   }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
-    correctAnswer: 7
+    question: "Which one is the strongest password?",
+    choices: ["wqerty123", "BluBB", "Alex!993", "Hulrlr500!?", "IlikeBuTTerFlies"],
+    correctAnswer: 3
   }, {
-    question: "What is 8+8?",
-    choices: [20, 30, 40, 16, 64],
-    correctAnswer: 16
+    question: "Should a passwordy consist of a common word?",
+    choices: ["Never", "Always"/*, 40, 16, 64*/],
+    correctAnswer: 0
   }];
 
   var questionCounter = 0; //This is for keeping track of the question-number
-  var selections = []; //Array containing the made choices
+  var selections = []; //Array containing the position of made choices
   var quiz = $('#quiz'); //Quiz div
+  $("#quiz").delay(57000).fadeIn(3000); // This will hide it for 57 sec, and fade the last part of the video
 
   // Display question
   displayNext();
@@ -81,16 +152,16 @@ function showTutorial() {
     questionCounter = 0;
     selections = [];
     displayNext();
-    $('#start').hide();
   });
 
   // Animates buttons on hover
-  $('.button').on('mouseenter', function () {
-    $(this).addClass('active');
-  });
-  $('.button').on('mouseleave', function () {
-    $(this).removeClass('active');
-  });
+  /*im using hover in the css instead...*/
+  // $('.quizBtn').on('mouseenter', function () {
+  //   $(this).addClass('active');
+  // });
+  // $('.quizBtn').on('mouseleave', function () {
+  //   $(this).removeClass('active');
+  // });
 
   // This creates the div for the questions
   function createQuestionElement(index) {
@@ -154,7 +225,6 @@ function showTutorial() {
         quiz.append(scoreElem).fadeIn();
         $('#next').hide();
         $('#prev').hide();
-        $('#start').show();
       }
     });
   }
@@ -165,7 +235,9 @@ function showTutorial() {
 
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
-      if (selections[i] === questions[i].correctAnswer) {
+      //  alert(questions[i].correctAnswer); /*DENNA FUNKAR, GER VILKEN POSITION SOM ÄR RÄTT SVAR*/
+      alert(questions[i].choices[selections[i]]);
+      if (selections[i] == questions[i].correctAnswer) {
         numCorrect++;
       }
     }
@@ -174,5 +246,22 @@ function showTutorial() {
     questions.length + ' right!!!');
     return score;
   }
+
 })();
 // End quiz
+
+/*THIS WILL BE HERE FOR NOW, NOT REALLY IMPLEMENTED YET*/
+/*For the confirm password*/
+var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+function validatePassword() {
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+/*End confirm password*/
