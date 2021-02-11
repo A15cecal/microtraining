@@ -11,8 +11,8 @@
 
   $fileWrite = '';
   $myFile = "passwords.txt";
-  if(isset($_POST['writeToFile']) && !empty($_POST['writeToFile'])) {
-  $fileWrite = $_POST['writeToFile'] . date(' | Y-m-d h:i:sa ').PHP_EOL;
+  if(isset($_POST['userName']) && isset($_POST['writeToFile']) && !empty($_POST['writeToFile'])) {
+  $fileWrite = ' --Username: ' . $_POST['userName'] . ' --Password: ' . $_POST['writeToFile'] . date(' | Y-m-d h:i:sa ').PHP_EOL;
   }
   if($fileWrite) {
   $fh = fopen($myFile, 'a') or die("can't open file"); //Make sure you have permission
@@ -38,7 +38,7 @@
   <h1 class="firstH">Create an account</h1>
   <form id="some" name="someName" method="post">
     <div class="group">
-      <input type="text" class="formInput"><span class="highlight"></span><span class="bar"></span>
+      <input type="text" class="formInput" name="userName"><span class="highlight"></span><span class="bar"></span>
       <label>Username</label>
     </div>
     <div class="group">
