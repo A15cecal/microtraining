@@ -32,9 +32,15 @@
   <button class="submitBtn">Submit</button>
 </div> -->
 
-<!-- test -->
 
 <div id="formCreate">
+
+  <div class="flex">
+             <div class="layer3 size"><p> 1. You'll create a password <u>two times</u> in this test. Begin with creating a password using your own usual methods and imagination. </p></div>
+             <div class="layer3 size"><p> 2. Once done, click on the link "learn how to create a strong password here" and watch the instructional video. </p></div>
+             <div class="layer3 size"><p> 3. Now create a second password and try to use the techniques you learnt through the material. </p></div>
+         </div>
+
   <h1 class="firstH">Create an account</h1>
   <form id="some" name="someName" method="post">
     <div class="group">
@@ -99,6 +105,14 @@
 
 </div>
 <!-- end quiz -->
+
+
+<!-- small fix for resubmitting form on page reload -->
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 
 </body>
 </html>
