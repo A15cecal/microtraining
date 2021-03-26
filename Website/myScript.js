@@ -83,7 +83,7 @@ out and then fill in when the user finishes the video*/
 (function() {
   var questions = [{
     question: "Are special characters good to use in a password?",
-    choices: ["Always", "Never"],
+    choices: ["Yes, when possible", "Never"],
     correctAnswer: 0
   }, {
     question: "How many characters should a password consist of?",
