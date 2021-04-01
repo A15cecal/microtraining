@@ -87,6 +87,7 @@
   <div id='container'>
 
     <div id='title'>
+      <h3>Please watch the entire video, once done you'll be automatically moved to the quiz.</h3>
       <!-- <h1 class="quizHeading">Password quiz</h1> -->
     </div>
     <br/>
