@@ -40,11 +40,11 @@
   </div>
 
   <div class="main layer3 size">
-    <p> 2. Once done, click on the link "learn how to create a strong password here" and watch the instructional video. </p>
+    <p> 2. Once done, click on the link "learn how to create a strong password here", watch the instructional video and answer the questions. </p>
   </div>
 
   <div class="right layer3 size">
-    <p> 3. Now create a second password and try to use the techniques you learnt through the material. </p>
+    <p> 3. Now, create a second password and try to use the techniques you learnt through the material. </p>
   </div>
 
   <!-- The first version of the instruction boxes at the top -->
