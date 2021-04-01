@@ -92,8 +92,9 @@
     <br/>
     <!-- For the video -->
     <div class="hideme" id="infor">
-<h3>Please watch the entire video without skipping forward, once finished you'll automatically continue to the quiz.</h3>
+
       <div class="video-container">
+        <h3 class="videoInstruction">Please watch the entire video without skipping forward, once finished you'll automatically continue to the quiz.</h3>
       <iframe width="420" height="315"
       src="https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1">
     </iframe>

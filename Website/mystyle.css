@@ -57,7 +57,7 @@ body {
 
 .right {
   background-color: white;
-  padding:20px;
+  padding:30px;
   float:left;
   width:15%; /* The width is 20%, by default */
 }
@@ -336,6 +336,11 @@ font-weight: bold;
 #quiz {
 	text-indent: 50px;
 	display:none;
+}
+@media screen and (max-width:800px) {
+  #container {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
 
 #centerBtns {
