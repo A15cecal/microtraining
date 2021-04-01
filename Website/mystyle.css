@@ -13,12 +13,12 @@ body {
 		 justify-content: space-around;
  }
 
- .size{
+ /* .size{
 		 text-align: center;
 		 background-color: white;
 		 width: 400px;
 		 height: 80px;
- }
+ } */
 
 
  .layer3 {
@@ -35,6 +35,40 @@ body {
  .layer3 {
 		 transition: 0.25s ease-in-out;
  }
+
+/*Adjustments for mobile view*/
+ * {
+  box-sizing:border-box;
+}
+
+.left {
+  background-color: white;
+  padding:20px;
+  float:left;
+  width:15%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: white;
+  padding:20px;
+  float:left;
+  width:15%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: white;
+  padding:20px;
+  float:left;
+  width:15%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+/*end mobile adjustments*/
 /*end instructions*/
 
 
@@ -46,6 +80,10 @@ body {
 	margin: 4em auto;
 	left: 5%;
 	position: absolute;
+}
+
+.firstH {
+	margin-top: 200px;
 }
 
 h1 { color: #636363;
