@@ -87,12 +87,13 @@
   <div id='container'>
 
     <div id='title'>
-      <h3>Please watch the entire video, once done you'll be automatically moved to the quiz.</h3>
       <!-- <h1 class="quizHeading">Password quiz</h1> -->
     </div>
     <br/>
     <!-- For the video -->
-    <div class="hideme" id="infor"><div class="video-container">
+    <div class="hideme" id="infor">
+<h3>Please watch the entire video, once finished you'll automatically continue to the quiz.</h3>
+      <div class="video-container">
       <iframe width="420" height="315"
       src="https://www.youtube.com/embed/Fl72BJmzq-4?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1&mute=1">
     </iframe>
